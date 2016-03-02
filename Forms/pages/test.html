@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../styles/form.css" type="text/css" rel="stylesheet">
+    <link href="../styles/elements.css" type="text/css" rel="stylesheet">
+    <script src="../scripts/formListener.js"></script>
+    <title>Test form</title>
+</head>
+<body>
+    <div id="navigator">
+
+    </div>
+    <form id="form" name="order" action="receiver.html" onsubmit="return validate_form ( );">
+
+        <div class="wrapper">
+            <p>Відомості</p>
+            <input type="text" id="username" placeholder="Enter your name" name="Name" onclick="unVis('usernameError')">
+            <label class="attention" id="usernameError">Enter name</label>
+            <input type="text" placeholder="email@sub.domain" name="eMail" onclick="unVis('emailError')">
+            <label class="attention" id="emailError">Enter name</label>
+        </div>
+        <div class="wrapper">
+            <p>Ліцензіні угоди</p>
+            <input type="checkbox" class="checkbox" id="checkbox1" name="License" onclick="unVis('licenseError')"/>
+            <label for="checkbox1">Згоден з умовами ліцензії</label>
+            <label class="attention" id="licenseError">Confirm the license</label>
+            <br />
+            <br />
+            <input type="checkbox" class="checkbox" id="checkbox2" name="Pay"/>
+            <label for="checkbox2">Згоден...</label>
+        </div>
+        <div class="wrapper">
+            <p>Спосіб доставки</p>
+            <input type="radio" class="radio" id="radio1" name="Delivery"/>
+            <label for="radio1">Кур'єр</label>
+            <br />
+            <br />
+            <input type="radio" class="radio" id="radio2" name="Delivery"/>
+            <label for="radio2">З магазину</label>
+            <br />
+            <br />
+            <input type="radio" class="radio" id="radio3" name="Delivery"/>
+            <label for="radio3">Пошта</label>
+        </div>
+        <div class="wrapper">
+            <p>Кількість</p>
+            <select class="select" name="Count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="wrapper">
+            <input type="reset" value="Скасувати">
+            <input type="submit" value="Пдтвердити" onclick="showPopup()">
+        </div>
+    </form>
+<input type="button" value="sdf" onclick="vis()" />
+</body>
+</html>

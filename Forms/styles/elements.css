@@ -1,0 +1,185 @@
+.checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+}
+
+.checkbox + label {
+    cursor: pointer;
+}
+
+.checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+.checkbox:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 60px;
+}
+
+.checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #CDD1DA;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+
+.checkbox:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    transition: all .2s;
+}
+
+.checkbox:checked + label:before {
+    background: #9FD468;
+}
+
+.checkbox:checked + label:after {
+    left: 26px;
+}
+
+.checkbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+}
+
+.radio:not(checked) {
+    opacity: 0;
+    position: absolute;
+}
+.radio {
+    height: 17px;
+    margin: 0 3px 0 0;
+    vertical-align: top;
+    width: 17px;
+}
+
+.radio:not(checked) + label::before {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #cdd1da;
+    border-radius: 50%;
+    content: "";
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: -3px;
+    width: 22px;
+}
+.radio:checked + label::after {
+    opacity: 1;
+}
+.radio:not(checked) + label::after {
+    background: #9fd468 none repeat scroll 0 0;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+    content: "";
+    height: 16px;
+    left: 4px;
+    opacity: 0;
+    position: absolute;
+    top: 1px;
+    transition: all 0.2s ease 0s;
+    width: 16px;
+}
+.radio:not(checked) + label {
+    padding: 0 0 0 35px;
+    position: relative;
+}
+.radio + label {
+    cursor: pointer;
+}
+
+
+input[type="reset"] {
+    background: #cdd1da none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 12px 15px;
+    width: 148px;
+}
+
+input[type="submit"] {
+    background: #cdd1da none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 12px 15px;
+    width: 148px;
+}
+
+input[type="text"] {
+    background: #ffffff;
+    border: medium none;
+    border-radius: 5px;
+    border: 1px solid #9FD468;
+    cursor: text;
+    font-size: 15px;
+    font-family: "Georgia", serif;
+    padding: 5px 15px;
+    margin-top: 5px;
+    width: calc(100% - 30px);
+}
+
+label {
+    font-family: "Georgia", serif;
+}
+
+.select {
+    background-position: 95% 50%;
+    border-radius: 5px;
+    margin-right: 2%;
+    width: 220px;
+    height: 30px;
+}
+.select >select:active,
+.select> select:focus {
+
+}
+select > option {
+    background-color: transparent;
+    border: 0;
+    padding-right: 15px;
+    height: 31px;
+    width: 220px;
+}
+select > option:nth-child(1) {
+}
+select > option:nth-last-child {
+}
+.select> select {
+    width: 100%;
+    color: black;
+    font-size: 14px;
+    font-family: 'Georgia', Helvetica, sans-serif;
+    line-height: 2.5;
+    background: transparent;
+    border: 0;
+    overflow: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-bottom: 0px;
+}
+
+.attention {
+    float: right;
+    display: none;
+    color: crimson;
+    font-style: italic;
+}
